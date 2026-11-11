@@ -34,7 +34,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 | <img alt="Cockpit Firewall UI" src="https://github.com/user-attachments/assets/08cb7ff9-dcae-4a60-bfa5-631a37fc64ba" /> | <img alt="firewalld CLI audit" src="https://github.com/user-attachments/assets/460bf332-0737-41d3-b1fd-a2097d88d708" /> |
  
    *    Container Isolation (SELinux): SELinux is enabled in permissive mode with private volume labels (:Z),
-        isolating Pi-hole's data folders and logging any unauthorized file access attempts to the host audit logs.
+        isolating Pi-hole's data folders and logging any unauthorized file access attempts to the host audit logs.  
 
         ```ini
         [Unit]
@@ -63,6 +63,8 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
         [Install]
         WantedBy=multi-user.target default.target
         ```
+
+        <img width="458" height="223" alt="screenshot_20261111_235812-annotated" src="https://github.com/user-attachments/assets/dc77f614-e782-4467-9085-5b364749bea6" />
 
 
 
