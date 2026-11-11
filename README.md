@@ -6,7 +6,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 
 ## Homelab Architecture
 
-* **Core Service:** Pi-hole deployed as a container managed via Podman Quadlets (`systemd`)
+* **Core Service:** Pi-hole deployed as a Rootful container managed via Podman Quadlets (`systemd`)
 * **Host OS:** openSUSE Leap 16.0, managed remotely via Tailscale SSH and Cockpit.
 * **Host Specs:** Headless HP Pavilion 15 Notebook PC (Intel Core i7-5500U @ 2.40GHz, 12GB RAM, 240GB storage).
 * **Network Role:** Primary network-wide DNS sinkhole at static IP 192.168.0.198, handling query logging and ad/tracker filtering.
