@@ -29,7 +29,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
         Additionally, the tailscale0 interface is assigned to the trusted zone (target: ACCEPT),
         which is utilized exclusively for remote SSH administration over the encrypted Tailscale mesh network.
 
-| CLI Audit (`firewalld`) | GUI Verification (Cockpit) |
+| GUI Verification (Cockpit) |  CLI Audit (`firewalld`)|
 | :---: | :---: |
 | <img alt="Cockpit Firewall UI" src="https://github.com/user-attachments/assets/08cb7ff9-dcae-4a60-bfa5-631a37fc64ba" /> | <img alt="firewalld CLI audit" src="https://github.com/user-attachments/assets/460bf332-0737-41d3-b1fd-a2097d88d708" /> |
  
