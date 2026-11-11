@@ -1,3 +1,5 @@
+
+
 # pi-hole-dns-telemetry-analysis
 A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked domain traffic, and establish baseline network visibility ahead of a planned Wazuh SIEM integration.
 
@@ -16,7 +18,10 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 * **Identified Risk:** Running a rootful container violates the Principle of Least Privilege, expanding the attack surface and increasing the risk of host compromise on the openSUSE system if the Pi-hole web interface or DNS service is exploited.
 * **Compensating Controls:** To mitigate this risk -
   
-   *    Perimeter Layer (Edge Router):  Port forwarding for DNS (TCP/UDP 53) and administrative ports is disabled on the edge router, preventing external WAN exposure via NAT.
+   *    Port forwarding (Virtual Servers) for DNS (TCP/UDP 53) and administrative ports is disabled on the TP-Link router behind the ISP modem,
+        preventing inbound traffic from reaching the local 192.168.0.0/24 subnet via NAT.
+        <img width="1148" height="627" alt="2026-11-11-233144_hyprshot" src="https://github.com/user-attachments/assets/dd487a2b-3603-4b37-9295-1f9432e5e71b" />
+
 
    *    Host Layer (firewalld on openSUSE Leap): The host firewall operates in the public zone with default-deny
         inbound filtering (target: default), permitting only essential management and DNS services (dns, ssh, cockpit, and dhcpv6-client)
@@ -24,9 +29,40 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
         Additionally, the tailscale0 interface is assigned to the trusted zone (target: ACCEPT),
         which is utilized exclusively for remote SSH administration over the encrypted Tailscale mesh network.
 
+| CLI Audit (`firewalld`) | GUI Verification (Cockpit) |
+| :---: | :---: |
+| <img alt="Cockpit Firewall UI" src="https://github.com/user-attachments/assets/08cb7ff9-dcae-4a60-bfa5-631a37fc64ba" /> | <img alt="firewalld CLI audit" src="https://github.com/user-attachments/assets/460bf332-0737-41d3-b1fd-a2097d88d708" /> |
+ 
+   *    Container Isolation (SELinux): SELinux is enabled in permissive mode with private volume labels (:Z),
+        isolating Pi-hole's data folders and logging any unauthorized file access attempts to the host audit logs.
 
-     
+        ```ini
+        [Unit]
+        Description=Pi-hole DNS Adblocker
+        After=network-online.target
 
+        [Container]
+        Image=docker.io/pihole/pihole:latest
+        ContainerName=pihole
+        Environment=FTLCONF_webserver_api_password=********
+        Environment=TZ=UTC
+        Environment=FTLCONF_LOCAL_IPV4=192.168.0.198
+        Environment=DNSMASQ_LISTENING=all
+        PublishPort=53:53/tcp
+        PublishPort=53:53/udp
+        PublishPort=80:80/tcp
+        Volume=/var/lib/pihole/etc_pihole:/etc/pihole:Z
+        Volume=/var/lib/pihole/etc_dnsmasq.d:/etc/dnsmasq.d:Z
+
+        AutoUpdate=registry
+
+        [Service]
+        Restart=always
+        TimeoutStartSec=900
+
+        [Install]
+        WantedBy=multi-user.target default.target
+        ```
 
 
 
