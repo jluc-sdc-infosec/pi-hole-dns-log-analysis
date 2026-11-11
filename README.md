@@ -69,7 +69,11 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 
 
 
-
+<!---
+try adding the drop capability
+if it breeaks, document it, 
+fix it, document it,
+and steps on how to fix it.
 
 <!---
 192.168.0.100 = 
