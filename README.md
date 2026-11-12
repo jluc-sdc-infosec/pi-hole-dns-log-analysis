@@ -25,10 +25,10 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 
 
    *    Host Layer (firewalld on openSUSE Leap): The host firewall operates in the public zone with default-deny
-        inbound filtering (target: default), permitting only essential management and DNS services (dns, ssh, cockpit, and dhcpv6-client)
-        on interface eno1 while dropping all other unsolicited traffic.
-        Additionally, the tailscale0 interface is assigned to the trusted zone (target: ACCEPT),
-        which is utilized exclusively for remote SSH administration over the encrypted Tailscale mesh network.
+        inbound filtering (target: default), permitting only local LAN management and DNS services (dns, ssh, cockpit, and dhcpv6-client)
+        on interface eno1 while dropping all other unwanted traffic.
+        Additionally, the tailscale0 interface operates in the trusted zone (target: ACCEPT),
+        which is utilized exclusively for remote SSH administration via Tailscale private network.
 
 | GUI Verification (Cockpit) |  CLI Audit (`firewalld`)|
 | :---: | :---: |
