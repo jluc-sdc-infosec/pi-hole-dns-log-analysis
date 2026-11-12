@@ -10,12 +10,12 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 * **Core Service:** Pi-hole deployed as a Rootful container managed via Podman Quadlets (`systemd`)
 * **Host OS:** openSUSE Leap 16.0, managed remotely via Tailscale SSH and Cockpit.
 * **Host Specs:** Headless HP Pavilion 15 Notebook PC (Intel Core i7-5500U @ 2.40GHz, 12GB RAM, 240GB storage).
-* **Network Role:** Primary network-wide DNS sinkhole at static IP 192.168.0.198, handling query logging and ad/tracker filtering.
-<!---* **Log Ingestion & Analysis:** <!--- Add ur analysis or something -->
+* **Network Role:** Primary network-wide DNS sinkhole at static IP 192.168.0.198 (distributed via TP-Link LAN DHCP), handling query logging, ad/tracker filtering, and per-client IP attribution.
+<!---* **Log Ingestion & Analysis:** <!--- Add ur analysis or something, logs and virustotal -->
 
 ## Risk Acceptance & Trade-Offs
 
-* **Operational Requirement:** Pi-hole is intentionally deployed as a rootful container to preserve true client source IP addresses in the DNS query logs
+* **Operational Requirement:** Pi-hole is intentionally deployed as a rootful container to preserve true client source IP addresses in the DNS query logs.
 * **Identified Risk:** Running a rootful container violates the Principle of Least Privilege, expanding the attack surface and increasing the risk of host compromise on the openSUSE system if the Pi-hole web interface or DNS service is exploited.
 * **Compensating Controls:** To mitigate this risk -
   
