@@ -4,7 +4,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 ## Table of Contents
 * [Homelab Architecture](#homelab-architecture)
 * [Risk Acceptance & Trade-Offs](#risk-acceptance--trade-offs)
-
+* [View Reports](./dns-analysis)
 ## Homelab Architecture
 
 * **Core Service:** Pi-hole deployed as a Rootful container managed via Podman Quadlets (`systemd`)
