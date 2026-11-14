@@ -1,3 +1,5 @@
+# Data Enrichment
+
 **Domain Observed:** `sessions.bugsnag[.]com`
 - **Client IP:** `192.168.0.105`
 - **VirusTotal Result:** `0/92` security vendors flagged this domain as malicious. The Relations tab only shows one old `1/92` IP record from `2019-12-13`, which is harmless shared cloud hosting noise.
