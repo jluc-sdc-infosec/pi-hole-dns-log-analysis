@@ -67,7 +67,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 
         <img width="458" height="223" alt="screenshot_20261111_235812-annotated" src="https://github.com/user-attachments/assets/dc77f614-e782-4467-9085-5b364749bea6" />
 
-- [Back to top](#pi-hole-dns-log-analysis)
+        [Back to top](#pi-hole-dns-log-analysis)
 
 
 <!---
