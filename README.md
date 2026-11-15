@@ -37,38 +37,37 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
    -    Container Isolation (SELinux): SELinux is enabled in permissive mode with private volume labels (:Z),
         isolating Pi-hole's data folders and logging any unauthorized file access attempts to the host audit logs.  
 
-        ```ini
-        [Unit]
-        Description=Pi-hole DNS Adblocker
-        After=network-online.target
+```ini
+[Unit]
+Description=Pi-hole DNS Adblocker
+After=network-online.target
 
-        [Container]
-        Image=docker.io/pihole/pihole:latest
-        ContainerName=pihole
-        Environment=FTLCONF_webserver_api_password=********
-        Environment=TZ=UTC
-        Environment=FTLCONF_LOCAL_IPV4=192.168.0.198
-        Environment=DNSMASQ_LISTENING=all
-        PublishPort=53:53/tcp
-        PublishPort=53:53/udp
-        PublishPort=80:80/tcp
-        Volume=/var/lib/pihole/etc_pihole:/etc/pihole:Z
-        Volume=/var/lib/pihole/etc_dnsmasq.d:/etc/dnsmasq.d:Z
+[Container]
+Image=docker.io/pihole/pihole:latest
+ContainerName=pihole
+Environment=FTLCONF_webserver_api_password=********
+Environment=TZ=UTC
+Environment=FTLCONF_LOCAL_IPV4=192.168.0.198
+Environment=DNSMASQ_LISTENING=all
+PublishPort=53:53/tcp
+PublishPort=53:53/udp
+PublishPort=80:80/tcp
+Volume=/var/lib/pihole/etc_pihole:/etc/pihole:Z
+Volume=/var/lib/pihole/etc_dnsmasq.d:/etc/dnsmasq.d:Z
 
-        AutoUpdate=registry
+AutoUpdate=registry
 
-        [Service]
-        Restart=always
-        TimeoutStartSec=900
+[Service]
+Restart=always
+TimeoutStartSec=900
 
-        [Install]
-        WantedBy=multi-user.target default.target
-        ```
+[Install]
+WantedBy=multi-user.target default.target
+```
+<img width="458" height="223" alt="screenshot_20261111_235812-annotated" src="https://github.com/user-attachments/assets/dc77f614-e782-4467-9085-5b364749bea6" />
 
-        <img width="458" height="223" alt="screenshot_20261111_235812-annotated" src="https://github.com/user-attachments/assets/dc77f614-e782-4467-9085-5b364749bea6" />
-
-        [Back to top](#pi-hole-dns-log-analysis)
-
+[Back to top](#pi-hole-dns-log-analysis)
+[Wazuh, Podman, Quadlets,]()
 
 <!---
 try adding the drop capability
@@ -76,7 +75,6 @@ if it breeaks, document it,
 fix it, document it,
 and steps on how to fix it.
 
-<!---
 192.168.0.100 = 
 192.168.0.110
 192.168.0.106
