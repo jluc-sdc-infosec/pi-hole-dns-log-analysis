@@ -37,7 +37,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
    -    Container Isolation (SELinux): SELinux is enabled in permissive mode with private volume labels (:Z),
         isolating Pi-hole's data folders and logging any unauthorized file access attempts to the host audit logs.  
 
-        ```ini
+        ```bash
         [Unit]
         Description=Pi-hole DNS Adblocker
         After=network-online.target
