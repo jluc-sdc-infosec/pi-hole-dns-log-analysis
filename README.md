@@ -67,6 +67,8 @@ WantedBy=multi-user.target default.target
 <img width="458" height="223" alt="screenshot_20261111_235812-annotated" src="https://github.com/user-attachments/assets/dc77f614-e782-4467-9085-5b364749bea6" />
 
 [Back to top](#pi-hole-dns-log-analysis)
+
+
 [Wazuh, Podman, Quadlets,]()
 
 <!---
