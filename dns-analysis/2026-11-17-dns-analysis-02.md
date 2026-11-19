@@ -23,4 +23,4 @@ Note: I know its google, but i still checked on VirusTotal, i see some nasty typ
 <img width="977" height="800" alt="2026-11-16-231244_hyprshot" src="https://github.com/user-attachments/assets/6b0b133f-a4b6-4e62-8778-b9c9018cd072" />
 
 ### Conclusion / Action
-Closed as **False Positive**. All traffic is legitimate mobile app telemetry, left blocked on Pi-hole for privacy/ad-filtering. No further escalation needed.
+Closed as **Benign True Positive**. All traffic is legitimate mobile app telemetry, left blocked on Pi-hole for privacy/ad-filtering. No further escalation needed.
