@@ -1,4 +1,5 @@
 # Threat Intel & DNS Sinkholing: Steam QR Code Phishing ("Quishing")
+Proactive OSINT enrichment of external phishing lures (`VirusTotal` + `AbuseIPDB`) and wildcard DNS sinkholing via Pi-hole.
 
 ## 1. Incident Summary
 * **Date:** November 22, 2026
