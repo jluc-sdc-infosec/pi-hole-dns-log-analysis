@@ -13,7 +13,6 @@
 | Type | Defanged Value | Findings |
 | :--- | :--- | :--- |
 | **Domain** | `dunkin-lottery[.]com` | **VirusTotal:** `0/92` clean (Zero-hour domain) |
-<img width="1775" height="867" alt="image" src="https://github.com/user-attachments/assets/03fbce08-94ce-4aba-a3a5-c1e973defb72" />
 
 | **Resolved IP** | `104[.]21[.]30[.]167` | **AbuseIPDB:** `100%` Confidence Score — **Tor Exit Node** |
 
