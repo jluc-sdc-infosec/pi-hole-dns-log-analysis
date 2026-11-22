@@ -5,7 +5,7 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 - [Homelab Architecture](#homelab-architecture)
 - [Risk Acceptance & Trade-Offs](#risk-acceptance--trade-offs)
 - [DNS Analysis](./dns-analysis/)
-- [Threat Intel & DNS Sinkholing](./threat-intel-sinkholing/) — Proactive OSINT enrichment of external phishing lures (`VirusTotal` + `AbuseIPDB`) and wildcard DNS sinkholing via Pi-hole.
+- [Threat Intel & DNS Sinkholing](./threat-intel-sinkholing/) 
 
 ## Homelab Architecture
 
