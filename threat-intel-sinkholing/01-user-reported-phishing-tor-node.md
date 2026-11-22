@@ -20,7 +20,8 @@
 
 ## 3. Triage & Key Takeaway
 1. **Safe Enrichment:** Checked the defanged domain and resolved IP passively via VirusTotal, AbuseIPDB, and WHOIS without visiting the URL.
-2. **Why `0/92` Failed:** Newly registered domains haven't been flagged by antivirus vendors yet. Pivoting to the underlying IP caught the Tor exit node infrastructure immediately.
+2. *2. **Why `0/92` Failed:** Domain-level scans showed `0/92` detections (last analyzed a month prior), but pivoting to the underlying IP immediately exposed active Tor exit node infrastructure (`100%` AbuseIPDB score).
+
 
 ---
 
