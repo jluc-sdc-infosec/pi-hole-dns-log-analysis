@@ -4,16 +4,16 @@ A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked do
 ## Table of Contents
 - [Homelab Architecture](#homelab-architecture)
 - [Risk Acceptance & Trade-Offs](#risk-acceptance--trade-offs)
-- [DNS Analysis](./dns-analysis)
-- [Threat Intel & DNS Sinkholing](./threat-intel-sinkholing/)** — Proactive OSINT enrichment of external phishing lures (`VirusTotal` + `AbuseIPDB`) and wildcard DNS sinkholing via Pi-hole.
+- [DNS Analysis](./dns-analysis/)
+- [Threat Intel & DNS Sinkholing](./threat-intel-sinkholing/) — Proactive OSINT enrichment of external phishing lures (`VirusTotal` + `AbuseIPDB`) and wildcard DNS sinkholing via Pi-hole.
 
 ## Homelab Architecture
 
 - **Core Service:** Pi-hole deployed as a Rootful container managed via Podman Quadlets (`systemd`)
 - **Host OS:** openSUSE Leap 16.0, managed remotely via Tailscale SSH and Cockpit.
 - **Host Specs:** Headless HP Pavilion 15 Notebook PC (Intel Core i7-5500U @ 2.40GHz, 12GB RAM, 240GB storage).
-- **Network Role:** Primary network-wide DNS sinkhole at static IP 192.168.0.198 (distributed via TP-Link LAN DHCP), handling query logging, ad/tracker filtering, and per-client IP attribution.
-- **Log Ingestion & Analysis:** [View Reports](./dns-analysis)
+- **Network Role:** Primary network-wide DNS sinkhole at static IP `192.168.0.198` (distributed via TP-Link LAN DHCP), handling query logging, ad/tracker filtering, and per-client IP attribution.
+- **Log Ingestion & Analysis:** View [DNS Analysis](./dns-analysis) & [Threat Intel Sinkholing](./threat-intel-sinkholing/)
 
 ## Risk Acceptance & Trade-Offs
 
