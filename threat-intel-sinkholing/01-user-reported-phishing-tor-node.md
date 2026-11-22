@@ -13,7 +13,7 @@
 
 | Type | Defanged Value | Findings |
 | :--- | :--- | :--- |
-| **Domain** | `dunkin-lottery[.]com` | **VirusTotal:** `0/92` clean (Zero-hour domain) |
+| **Domain** | `dunkin-lottery[.]com` | **VirusTotal:** `0/92` clean |
 | **Resolved IP** | `104[.]21[.]30[.]167` | **AbuseIPDB:** `100%` Confidence Score — **Tor Exit Node** |
 | **ISP / Usage** | `Network for Tor-Exit traffic.` | Dedicated **Tor Exit Node** infrastructure | 
 
