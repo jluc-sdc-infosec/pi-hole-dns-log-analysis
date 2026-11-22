@@ -1,4 +1,5 @@
 # Threat Intel & DNS Sinkholing: User-Reported Phishing Link
+Proactive OSINT enrichment of external phishing lures (`VirusTotal` + `AbuseIPDB`) and wildcard DNS sinkholing via Pi-hole.
 
 ## 1. Incident Summary
 * **Date:** November 22, 2026
