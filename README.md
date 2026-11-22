@@ -1,5 +1,5 @@
 # pi-hole-dns-log-analysis
-A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked domain traffic, and establish baseline network visibility.
+A home lab deployment of Pi-hole to analyze network DNS logs, monitor blocked domain traffic, and establish baseline network visibility with threat intel enrichment (VirusTotal + AbuseIPDB).
 
 ## Table of Contents
 - [Homelab Architecture](#homelab-architecture)
