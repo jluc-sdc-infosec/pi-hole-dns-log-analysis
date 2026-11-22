@@ -4,7 +4,8 @@
 * **Date:** November 22, 2026
 * **Source:** External user-reported link (forwarded by a friend for verification; not from Pi-hole query logs)
 * **Verdict:** **True Positive** — Malicious Phishing Infrastructure
-* **Finding:** The domain scored **0/92** clean on VirusTotal because it was newly registered, but its resolved IP scored **100% critical** on AbuseIPDB as an active **Tor Exit Node**.
+* **Finding:** The domain scored **0/92** clean on VirusTotal, but its resolved IP scored **100% critical** on AbuseIPDB as an active **Tor Exit Node**.
+
 
 ---
 
